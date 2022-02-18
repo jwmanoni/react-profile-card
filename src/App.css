@@ -1,38 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Roboto:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  font-family: 'Roboto', 'sans-serif';
+  justify-content: center;
+  align-items: center;
+  background-image: url('beach.jpg');
+  background-size: cover;
+  /* background-repeat: no-re; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  /* background-color: red; */
+  height: 100px;
+  width: 100%;
+  background-image: url('galaxy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.frame {
+  position: absolute;
+  margin-bottom: 100px;
+  transition: 0.2s all;
+}
+
+.frame:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+#profile{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.main {
+  /* background-color: blue; */
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+#name {
+  font-weight: 900;
+}
+
+.main span {
+  color: gray;
+  font-weight: lighter;
+}
+
+#state {
+  font-size: x-small;
+}
+
+.footer {
+  /* background-color: yellow; */
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.1px solid lightgray;
+}
+
+.stats {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.stats p:nth-child(1) {
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stats p:last-child {
+  font-size: smaller;
 }
